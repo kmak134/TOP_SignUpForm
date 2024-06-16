@@ -3,7 +3,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-        
+        <script src="script.js" defer></script>
 
         <link rel="stylesheet" href="styles.css">
 
@@ -17,9 +17,9 @@
         <main class="main">
             <div class="main-div">
                 <div class="media-div">
-                    <img src="leaves.jpg">
+                    <img src="media/leaves.jpg">
                     <div class="logo" id="logo-div">
-                        <img src="odin-logo.png">
+                        <img src="media/odin-logo.png">
                         <text class="logo-label">ODIN</text>
                     </div>
                     <div class="credits" id="image-credits">
@@ -40,36 +40,42 @@
                                 </div>
                                 <div class="form-inputs">
                                     <div class="input">
-                                        <label for="first-name">FIRST NAME</label>
-                                        <input type="text" id="first-name" name="first_name">
+                                        <label for="first-name">FIRST NAME*</label>
+                                        <input type="text" id="first-name" name="first_name" required="">
+                                        <p class="error-text name-error"></p>
                                     </div>
                                     <div class="input">
                                         <label for="last-name">LAST NAME</label>
                                         <input type="text" id="last-name" name="last_name">
                                     </div>
                                     <div class="input">
-                                        <label for="email">EMAIL</label>
-                                        <input type="email" id="email" name="email">
+                                        <label for="email">EMAIL*</label>
+                                        <input type="email" id="email" name="email" placeholder="abc123@abc.com" required="">
+                                        <p class="error-text email-error"></p>
                                     </div>
                                     <div class="input">
                                         <label for="phone-number">PHONE NUMBER</label>
-                                        <input type="tel" id="phone-number" name="phone">
+                                        <input type="tel" pattern="[0-9]{10}" id="phone-number" placeholder="1234567890" name="phone">
+                                        <p class="error-text phone-error"></p>
                                     </div>
                                     <div class="input">
-                                        <label for="user_password">PASSWORD</label>
-                                        <input type="password" id="user_password" name="password">
+                                        <label for="user_password">PASSWORD*</label>
+                                        <input type="password" id="password" name="password" required="">
+                                        <p class="error-text password-error"></p>
                                     </div>
                                     <div class="input">
-                                        <label for="confirm_password">CONFIRM PASSWORD</label>
-                                        <input type="password" id="confirm_password">
+                                        <label for="confirm_password">CONFIRM PASSWORD*</label>
+                                        <input type="password" id="confirmPassword" required="">
+                                        <p class="error-text confirm-password-error"></p>
                                     </div>
                                 </div>
                         </div>
                              
                         <button type="submit" id="submit-btn">Create Account</button>
+                        <p class="error-text signup-error"></p>
                     </form>
                     <div id="login-div">
-                        Already have an account? <text style="color: #596D48; font-weight: 600;">Log in</text>
+                        Already have an account? <text id='login-text' style="color: #596D48; font-weight: 600;">Log in</text>
                     </div>
                 </div>
             </div>
